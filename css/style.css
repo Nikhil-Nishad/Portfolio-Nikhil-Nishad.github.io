@@ -50,7 +50,7 @@ html {
 }
 
 body {
-    /* overflow: hidden;                        tobetested */
+    
     transition: .2s linear !important;
 }
 
