@@ -50,7 +50,7 @@ html {
 }
 
 body {
-    /* overflow: hidden;                        tobetested */
+    
     transition: .2s linear !important;
 }
 
@@ -263,35 +263,74 @@ section {
     padding: 1rem;
 }
 
+.about .skills .progress .bar {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Light gray background for the bar */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.about .skills .progress .bar {
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f0f0; /* Light gray background for the bar */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 1rem; /* Space between bars */
+}
+
 .about .skills .progress .bar h3 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 2rem;
-    padding: 2rem;
-    background-color: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  padding: 2rem;
+  position: relative;
+  z-index: 2; /* Ensure text is above the animation */
 }
 
 .about .skills .progress .bar span {
-    font-weight: normal;
+  font-weight: normal;
 }
 
-.about .skills .progress .bar:nth-child(1) h3 {
-    width: 85%;
+.about .skills .progress .bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0; /* Start with 0 width */
+  background-color: var(--yellow); /* Yellow fill color */
+  border-radius: 10px; /* Rounded corners */
+  animation: fillAnimation 2s ease-in-out forwards; /* Animation */
+  z-index: 1; /* Place behind the text */
 }
 
-.about .skills .progress .bar:nth-child(2) h3 {
-    width: 70%;
+/* Define the fill animation */
+@keyframes fillAnimation {
+  0% {
+    width: 0; /* Start from 0% width */
+  }
+  100% {
+    width: var(--fill-width); /* Fill to dynamic width */
+  }
 }
 
-.about .skills .progress .bar:nth-child(3) h3 {
-    width: 65%;
+/* Set individual widths for each bar */
+.about .skills .progress .bar:nth-child(1)::before {
+  --fill-width: 80%; /* React.js */
 }
 
-.about .skills .progress .bar:nth-child(4) h3 {
-    width: 60%;
+.about .skills .progress .bar:nth-child(2)::before {
+  --fill-width: 85%; /* HTML */
 }
 
+.about .skills .progress .bar:nth-child(3)::before {
+  --fill-width: 70%; /* CSS */
+}
+
+.about .skills .progress .bar:nth-child(4)::before {
+  --fill-width: 65%; /* JavaScript */
+}
 .about .edu-exp .row {
     display: flex;
     flex-wrap: wrap;

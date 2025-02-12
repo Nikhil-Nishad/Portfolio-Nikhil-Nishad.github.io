@@ -61,14 +61,13 @@ techItems2.animate(
     iterations: Infinity,
   }
 );
-   const socialLinks = document.querySelectorAll(".social-links a");
+const socialLinks = document.querySelectorAll(".social-links a");
 
-   socialLinks.forEach((link) => {
-     link.addEventListener("mouseenter", () => {
-       link.style.transform = "translateY(-5px)";
-     });
-     link.addEventListener("mouseleave", () => {
-       link.style.transform = "translateY(0)";
-     });
-   });
-
+socialLinks.forEach((link) => {
+  link.addEventListener("mouseenter", () => {
+    link.style.transform = "translateY(-5px)";
+  });
+  link.addEventListener("mouseleave", () => {
+    link.style.transform = "translateY(0)";
+  });
+});
