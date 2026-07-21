@@ -16,13 +16,30 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
       <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full aurora-blur pointer-events-none" />
 
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Column Text Content */}
+        {/* Left Column Text & Mobile Profile Avatar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="lg:col-span-7 space-y-6"
         >
+          {/* Mobile Profile Photo Avatar Header (Displayed on mobile/tablet view < lg) */}
+          <div className="flex lg:hidden items-center gap-3.5 glass-card p-2.5 rounded-2xl border border-white/10 w-fit">
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500/30 shadow-md shadow-blue-500/20 shrink-0">
+              <Image
+                src="/profile.png"
+                alt="Nikhil Nishad"
+                width={48}
+                height={48}
+                className="object-cover object-top w-full h-full"
+              />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-white font-display leading-tight">{profile.name}</h3>
+              <p className="text-xs text-blue-400 font-mono mt-0.5">{profile.title}</p>
+            </div>
+          </div>
+
           {/* Status Badge */}
           {profile.status && (
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono shadow-sm">
@@ -81,7 +98,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           </div>
         </motion.div>
 
-        {/* Right Column Portrait - Hidden on mobile screens, displayed only on large desktop screens (hidden lg:flex) */}
+        {/* Right Column Portrait - Displayed on Desktop (lg:flex) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
