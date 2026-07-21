@@ -13,12 +13,21 @@
       "Developed an OCR-based POC for intelligent document data extraction and structured JSON output.",
       "Collaborated with clients and agile teams to deliver clean, maintainable SaaS tools."
     ],
-    "techStack": ["React.js", "Node.js", "Express.js", "MongoDB", "LLMs", "OCR", "Python", "Automation"]
+    "techStack": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "LLMs",
+      "OCR",
+      "Python",
+      "Automation"
+    ]
   },
   {
     "id": "cabbalistic",
     "company": "Cabbalistic Technologies Private Limited",
-    "role": "Software Developer / Full Stack Developer",
+    "role": "Web Developer Intern",
     "period": "May 2025 – June 2025",
     "location": "India",
     "description": "Full-stack development using MERN stack for scalable web applications.",
@@ -27,6 +36,12 @@
       "Built responsive UI components and optimized backend APIs for performance.",
       "Implemented authentication, database integration, and RESTful services."
     ],
-    "techStack": ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs"]
+    "techStack": [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "REST APIs"
+    ]
   }
 ]
