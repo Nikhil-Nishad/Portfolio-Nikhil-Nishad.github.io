@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProjects, getProjectBySlug, getProfile } from '@/lib/content';
 import { Container } from '@/components/ui/Container';
@@ -13,6 +14,27 @@ import Link from 'next/link';
 export async function generateStaticParams() {
   const projects = getProjects();
   return projects.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    return {
+      title: 'Project Not Found',
+    };
+  }
+
+  return {
+    title: `${project.title} - Case Study`,
+    description: project.subtitle || project.overview || `Case study detailing engineering, architecture, and outcomes for ${project.title}.`,
+    openGraph: {
+      title: `${project.title} | Nikhil Nishad Portfolio`,
+      description: project.subtitle || project.overview,
+      type: 'article',
+    },
+  };
 }
 
 export default async function ProjectCaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {

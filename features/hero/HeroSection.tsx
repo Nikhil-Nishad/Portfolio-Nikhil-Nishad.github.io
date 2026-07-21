@@ -1,11 +1,11 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { Badge } from '@/components/ui/Badge';
-import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Bot, Code2, Award, BookOpen, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Bot, Code2 } from 'lucide-react';
 import { Profile } from '@/lib/content';
 
 export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
@@ -69,19 +69,19 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
 
           {/* Social Badges */}
           <div className="flex items-center gap-4 pt-2 text-[#A1A1AA]">
-            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all">
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all" aria-label="GitHub Profile">
               <Github className="w-5 h-5" />
             </a>
-            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all">
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all" aria-label="LinkedIn Profile">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href={`mailto:${profile.email}`} className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all">
+            <a href={`mailto:${profile.email}`} className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all" aria-label="Send Email">
               <Mail className="w-5 h-5" />
             </a>
           </div>
         </motion.div>
 
-        {/* Right Column Profile Card Frame */}
+        {/* Right Column Profile Card Frame with Portrait Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -90,13 +90,19 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
         >
           <div className="relative w-full max-w-md animate-float-slow">
             {/* Glowing Rim Light */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl blur opacity-35" />
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl blur opacity-40" />
             
             <div className="relative glass-card rounded-3xl p-8 border border-white/15 text-center space-y-6 shadow-2xl">
-              <div className="relative w-40 h-40 mx-auto rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-1">
-                <div className="w-full h-full rounded-[14px] bg-[#111113] flex flex-col items-center justify-center text-4xl font-bold text-gradient">
-                  NN
-                  <span className="text-[10px] font-mono font-normal text-blue-400 mt-1">AI ENGINEER</span>
+              <div className="relative w-44 h-44 mx-auto rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-1 shadow-lg shadow-blue-500/20">
+                <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-[#111113] flex items-center justify-center">
+                  <Image
+                    src="/profile.png"
+                    alt="Nikhil Nishad - AI Engineer & Full Stack Developer"
+                    width={220}
+                    height={220}
+                    priority
+                    className="object-cover object-top w-full h-full hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               </div>
 
