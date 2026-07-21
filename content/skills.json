@@ -1,0 +1,32 @@
+[
+  {
+    "category": "AI & Generative AI",
+    "description": "Building intelligent systems & agents",
+    "skills": ["Large Language Models (LLMs)", "Prompt Engineering", "RAG", "Agentic AI", "MCP Servers", "AI Chatbots"]
+  },
+  {
+    "category": "Intelligent Document Processing",
+    "description": "Automated data extraction & document OCR",
+    "skills": ["OCR Integration", "Document Data Extraction", "Structured JSON Parsing"]
+  },
+  {
+    "category": "Frontend Engineering",
+    "description": "Modern high-performance UI",
+    "skills": ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS v4", "Shadcn/UI", "JavaScript", "HTML/CSS"]
+  },
+  {
+    "category": "Backend & Databases",
+    "description": "Scalable REST APIs & Data layers",
+    "skills": ["Node.js", "Express.js", "REST APIs", "MongoDB", "MySQL", "Python"]
+  },
+  {
+    "category": "Automation & Workflows",
+    "description": "Self-hosted & cloud workflow pipelines",
+    "skills": ["n8n (Self-hosted)", "Workflow Automation", "Webhooks", "API Integrations"]
+  },
+  {
+    "category": "DevOps & Tools",
+    "description": "Deployment, containerization & tracking",
+    "skills": ["Git", "Docker", "Vercel", "GitHub Actions", "Google Analytics", "Telegram Bot API"]
+  }
+]

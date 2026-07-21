@@ -1,0 +1,23 @@
+[
+  {
+    "id": "portfolio-v2",
+    "title": "Portfolio v2.1 — AI SaaS Web Platform",
+    "status": "In Active Development",
+    "description": "Building a high-performance, dark-themed portfolio architecture with Next.js 15, dynamic case study pages, and tailored recruiter metrics.",
+    "techStack": ["Next.js 15", "TypeScript", "Tailwind v4", "Motion"]
+  },
+  {
+    "id": "elevate-v2",
+    "title": "Elevate Fitness v2 — Agentic Fitness Engine",
+    "status": "R&D Phase",
+    "description": "Upgrading exercise tracking with real-time vision pose feedback and autonomous multi-agent workout plan generation.",
+    "techStack": ["Agentic AI", "MCP Servers", "Supabase", "Next.js"]
+  },
+  {
+    "id": "ai-career-copilot",
+    "title": "AI Job Copilot & Resume Optimizer",
+    "status": "Prototype",
+    "description": "Developing an LLM agent that parses job descriptions, analyzes skill gaps, and tailors candidate portfolios automatically.",
+    "techStack": ["Python", "LangChain", "OpenAI API", "Node.js"]
+  }
+]

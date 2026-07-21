@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ai-first",
+    "title": "AI-First Product Thinking",
+    "icon": "Bot",
+    "description": "AI shouldn't be a gimmick—it must solve core user pain points. I integrate LLMs, OCR pipelines, and automation to streamline real workflows."
+  },
+  {
+    "id": "performance",
+    "title": "Performance & Zero Bloat",
+    "icon": "Zap",
+    "description": "Speed is a feature. I optimize images, minimize bundle size, and enforce strict Lighthouse 95+ performance targets."
+  },
+  {
+    "id": "architecture",
+    "title": "Scalable Code & Strict Types",
+    "icon": "Code",
+    "description": "Clean folder structure, strict TypeScript types, and decoupled static data ensure the codebase stays maintainable and production-ready."
+  },
+  {
+    "id": "accessibility",
+    "title": "Accessibility & Mobile First",
+    "icon": "Smartphone",
+    "description": "Treating mobile users as first-class citizens with thumb-friendly tap targets, WCAG AA compliance, and fluid responsiveness."
+  }
+]
