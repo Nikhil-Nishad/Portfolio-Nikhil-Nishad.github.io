@@ -26,10 +26,10 @@ export const Navbar: React.FC<NavbarProps> = ({ resumeUrl }) => {
   const navLinks = [
     { name: 'About', href: '/#about' },
     { name: 'Experience', href: '/#experience' },
+    { name: 'Skills', href: '/#skills' },
     { name: 'Projects', href: '/#projects' },
     { name: 'Building', href: '/#building' },
     { name: 'Philosophy', href: '/#philosophy' },
-    { name: 'Skills', href: '/#skills' },
     { name: 'Achievements', href: '/#achievements' },
     { name: 'Contact', href: '/#contact' },
   ];
@@ -37,7 +37,7 @@ export const Navbar: React.FC<NavbarProps> = ({ resumeUrl }) => {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass-nav py-3 shadow-xl' : 'bg-transparent py-5'}`}>
       <Container className="flex items-center justify-between">
-        {/* Brand Logo with Profile Avatar Photo */}
+        {/* Brand Logo with Profile Avatar Photo (Visible on all screens including mobile top-left) */}
         <Link href="/" className="flex items-center gap-2.5 font-bold text-base text-white group">
           <div className="relative w-8 h-8 rounded-full overflow-hidden border border-white/20 group-hover:border-blue-400 transition-colors shadow-md shadow-blue-500/10 shrink-0">
             <Image
@@ -66,9 +66,9 @@ export const Navbar: React.FC<NavbarProps> = ({ resumeUrl }) => {
           ))}
         </nav>
 
-        {/* Resume Action Button */}
+        {/* Resume Download Action Button */}
         <div className="hidden sm:flex items-center gap-3">
-          <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
+          <a href={resumeUrl} download="Nikhil_Nishad_Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm">
               <Download className="w-3.5 h-3.5" />
               Resume
@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ resumeUrl }) => {
             ))}
           </div>
           <div className="pt-2 border-t border-white/10">
-            <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className="block w-full">
+            <a href={resumeUrl} download="Nikhil_Nishad_Resume.pdf" target="_blank" rel="noopener noreferrer" className="block w-full">
               <Button variant="outline" size="sm" className="w-full">
                 <Download className="w-4 h-4" />
                 Download Resume

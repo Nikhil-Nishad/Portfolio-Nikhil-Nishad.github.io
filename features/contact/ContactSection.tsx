@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
 import { Profile } from '@/lib/content';
-import { Mail, Linkedin, Github, Sparkles } from 'lucide-react';
+import { Mail, Linkedin, Github, Download, Sparkles } from 'lucide-react';
 
 export const ContactSection: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
@@ -18,7 +18,7 @@ export const ContactSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           <span>Let's Connect</span>
         </div>
 
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-gradient">
+        <h2 className="text-3xl sm:text-5xl font-bold font-display tracking-tight text-gradient">
           Building Something Intelligent? Let's Talk.
         </h2>
 
@@ -33,8 +33,14 @@ export const ContactSection: React.FC<{ profile: Profile }> = ({ profile }) => {
               Send Email
             </Button>
           </a>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+          <a href={profile.resume} download="Nikhil_Nishad_Resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="secondary" size="lg">
+              <Download className="w-4 h-4" />
+              Download Resume
+            </Button>
+          </a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="lg">
               <Linkedin className="w-4 h-4" />
               LinkedIn
             </Button>
@@ -42,7 +48,7 @@ export const ContactSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           <a href={profile.github} target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="lg">
               <Github className="w-4 h-4" />
-              GitHub Profile
+              GitHub
             </Button>
           </a>
         </div>

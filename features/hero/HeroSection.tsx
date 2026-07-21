@@ -59,7 +59,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
                 <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
-            <a href={profile.resume} target="_blank" rel="noopener noreferrer">
+            <a href={profile.resume} download="Nikhil_Nishad_Resume.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" size="lg">
                 <Download className="w-4 h-4" />
                 Resume
@@ -81,12 +81,12 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           </div>
         </motion.div>
 
-        {/* Right Column Subtle & Classy Transparent Portrait Frame */}
+        {/* Right Column Portrait - Hidden on mobile screens, displayed only on large desktop screens (hidden lg:flex) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:col-span-5 flex justify-center"
+          className="hidden lg:flex lg:col-span-5 justify-center"
         >
           <div className="relative w-full max-w-sm animate-float-slow">
             {/* Soft Ambient Light Glow Behind Portrait */}

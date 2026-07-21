@@ -4,10 +4,10 @@ import { CursorGlow } from '@/components/layout/CursorGlow';
 import { HeroSection } from '@/features/hero/HeroSection';
 import { AboutSection } from '@/features/about/AboutSection';
 import { ExperienceSection } from '@/features/experience/ExperienceSection';
+import { SkillsSection } from '@/features/skills/SkillsSection';
 import { ProjectsSection } from '@/features/projects/ProjectsSection';
 import { CurrentlyBuildingSection } from '@/features/building/CurrentlyBuildingSection';
 import { PhilosophySection } from '@/features/philosophy/PhilosophySection';
-import { SkillsSection } from '@/features/skills/SkillsSection';
 import { AchievementsSection } from '@/features/achievements/AchievementsSection';
 import { ContactSection } from '@/features/contact/ContactSection';
 import {
@@ -36,10 +36,10 @@ export default function Home() {
       <HeroSection profile={profile} />
       <AboutSection profile={profile} />
       <ExperienceSection experience={experience} />
+      <SkillsSection skills={skills} />
       <ProjectsSection projects={projects} />
       <CurrentlyBuildingSection building={building} />
       <PhilosophySection philosophy={philosophy} />
-      <SkillsSection skills={skills} />
       <AchievementsSection achievements={achievements} />
       <ContactSection profile={profile} />
       <Footer github={profile.github} linkedin={profile.linkedin} email={profile.email} />
