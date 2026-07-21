@@ -17,7 +17,7 @@ export const AchievementsSection: React.FC<{ achievements: AchievementItem[] }> 
   };
 
   return (
-    <section id="achievements" className="py-20 border-t border-white/5">
+    <section id="achievements" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Milestones & Recognition"
@@ -42,7 +42,7 @@ export const AchievementsSection: React.FC<{ achievements: AchievementItem[] }> 
                   <div className="flex items-center gap-2">
                     <Badge variant="accent">{item.category}</Badge>
                   </div>
-                  <h3 className="text-base font-bold text-white">{item.title}</h3>
+                  <h3 className="text-base font-bold font-display text-white">{item.title}</h3>
                   <p className="text-xs text-blue-400 font-mono">{item.organization}</p>
                   {item.description && (
                     <p className="text-xs text-[#A1A1AA] pt-1">{item.description}</p>

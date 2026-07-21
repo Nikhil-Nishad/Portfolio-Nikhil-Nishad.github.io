@@ -1,27 +1,21 @@
 @import "tailwindcss";
 
 @theme {
+  --font-display: var(--font-display), var(--font-sans), sans-serif;
   --color-bg-base: #09090b;
   --color-bg-surface: #111113;
-  --color-bg-card: #18181b;
-  --color-bg-card-hover: #1f1f23;
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
-  --color-[#09090B]: #09090b;
-  --color-[#111113]: #111113;
-  --color-[#18181B]: #18181b;
-  --color-[#1F1F23]: #1f1f23;
-  --color-[#FAFAFA]: #fafafa;
-  --color-[#A1A1AA]: #a1a1aa;
-  --color-[#71717A]: #71717a;
+  --color-bg-card: #141417;
+  --color-bg-card-hover: #1a1a1e;
+  --color-border-subtle: rgba(255, 255, 255, 0.06);
 }
 
 @layer base {
   :root {
     --bg-base: #09090b;
     --bg-surface: #111113;
-    --bg-card: #18181b;
-    --bg-card-hover: #1f1f23;
-    --border-subtle: rgba(255, 255, 255, 0.08);
+    --bg-card: #141417;
+    --bg-card-hover: #1a1a1e;
+    --border-subtle: rgba(255, 255, 255, 0.06);
     --text-primary: #fafafa;
     --text-secondary: #a1a1aa;
     --text-muted: #71717a;
@@ -39,15 +33,22 @@
     color: var(--text-primary);
     font-family: var(--font-sans), system-ui, sans-serif;
     overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    letter-spacing: -0.025em;
   }
 }
 
-/* Glassmorphism & UI Utilities */
+/* Minimalist Glassmorphism & UI Primitives */
 .glass-card {
-  background: rgba(24, 24, 27, 0.65);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(18, 18, 22, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
 }
 
 .glass-card-hover {
@@ -55,27 +56,27 @@
 }
 
 .glass-card-hover:hover {
-  background: rgba(31, 31, 35, 0.85);
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.15);
-  transform: translateY(-4px);
+  background: rgba(24, 24, 29, 0.8);
+  border-color: rgba(59, 130, 246, 0.25);
+  box-shadow: 0 12px 36px -10px rgba(59, 130, 246, 0.12);
+  transform: translateY(-3px);
 }
 
 .glass-nav {
-  background: rgba(9, 9, 11, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(9, 9, 11, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #d4d4d8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-accent {
-  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -86,32 +87,32 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Background Grids & Animations */
+/* Background Grids & Ambient Glows */
 .bg-grid-pattern {
-  background-size: 32px 32px;
+  background-size: 40px 40px;
   background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
 }
 
 .aurora-blur {
-  filter: blur(140px);
-  opacity: 0.25;
-  animation: auroraPulse 8s ease-in-out infinite alternate;
+  filter: blur(160px);
+  opacity: 0.18;
+  animation: auroraPulse 10s ease-in-out infinite alternate;
 }
 
 @keyframes auroraPulse {
   0% {
     transform: scale(1) translate(0, 0);
-    opacity: 0.2;
+    opacity: 0.15;
   }
   50% {
-    transform: scale(1.15) translate(-20px, 20px);
-    opacity: 0.35;
+    transform: scale(1.1) translate(-15px, 15px);
+    opacity: 0.25;
   }
   100% {
-    transform: scale(1) translate(20px, -10px);
-    opacity: 0.2;
+    transform: scale(1) translate(15px, -10px);
+    opacity: 0.15;
   }
 }
 
@@ -120,10 +121,10 @@
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
   }
 }
 
 .animate-float-slow {
-  animation: floatSlow 6s ease-in-out infinite;
+  animation: floatSlow 7s ease-in-out infinite;
 }

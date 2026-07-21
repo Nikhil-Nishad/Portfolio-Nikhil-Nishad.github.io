@@ -10,7 +10,7 @@ import { SkillCategory } from '@/lib/content';
 
 export const SkillsSection: React.FC<{ skills: SkillCategory[] }> = ({ skills }) => {
   return (
-    <section id="skills" className="py-20 border-t border-white/5">
+    <section id="skills" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Technical Proficiency"
@@ -29,7 +29,7 @@ export const SkillsSection: React.FC<{ skills: SkillCategory[] }> = ({ skills })
             >
               <Card className="h-full flex flex-col justify-between space-y-4">
                 <div>
-                  <h3 className="text-base font-bold text-white text-gradient-accent">
+                  <h3 className="text-base font-bold font-display text-white text-gradient-accent">
                     {category.category}
                   </h3>
                   <p className="text-xs text-[#71717A] mt-1">{category.description}</p>

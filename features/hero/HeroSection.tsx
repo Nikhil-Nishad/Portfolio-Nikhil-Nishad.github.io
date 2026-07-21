@@ -10,10 +10,10 @@ import { Profile } from '@/lib/content';
 
 export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
-    <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-grid-pattern">
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-grid-pattern">
       {/* Background Aurora Radial Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/15 rounded-full aurora-blur pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[450px] h-[450px] bg-purple-600/15 rounded-full aurora-blur pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-600/10 rounded-full aurora-blur pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-purple-600/10 rounded-full aurora-blur pointer-events-none" />
 
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text Content */}
@@ -32,11 +32,11 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           )}
 
           {/* Headline & Subtitle */}
-          <div className="space-y-3">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+          <div className="space-y-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-display tracking-tight leading-[1.1]">
               Building <span className="text-gradient-accent">intelligent products</span> for real-world problems.
             </h1>
-            <p className="text-[#A1A1AA] text-lg sm:text-xl leading-relaxed max-w-2xl">
+            <p className="text-[#A1A1AA] text-base sm:text-lg leading-relaxed max-w-xl">
               AI Engineer focused on <span className="text-white font-medium">LLMs, Agentic AI, OCR, Automation</span>, and scalable full-stack web applications.
             </p>
           </div>
@@ -44,7 +44,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           {/* Key Stat Highlights */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
             {profile.stats?.map((stat, idx) => (
-              <div key={idx} className="glass-card p-3 rounded-xl border border-white/10 text-left">
+              <div key={idx} className="glass-card p-3 rounded-xl border border-white/5 text-left">
                 <p className="text-[10px] font-mono text-blue-400 uppercase tracking-wider">{stat.label}</p>
                 <p className="text-xs font-bold text-white mt-0.5 truncate">{stat.value}</p>
               </div>
@@ -67,7 +67,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
             </a>
           </div>
 
-          {/* Social Badges */}
+          {/* Social Links */}
           <div className="flex items-center gap-4 pt-2 text-[#A1A1AA]">
             <a href={profile.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all" aria-label="GitHub Profile">
               <Github className="w-5 h-5" />
@@ -81,52 +81,33 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           </div>
         </motion.div>
 
-        {/* Right Column Profile Card Frame with Portrait Image */}
+        {/* Right Column Subtle & Classy Transparent Portrait Frame */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="lg:col-span-5 flex justify-center"
         >
-          <div className="relative w-full max-w-md animate-float-slow">
-            {/* Glowing Rim Light */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl blur opacity-40" />
-            
-            <div className="relative glass-card rounded-3xl p-8 border border-white/15 text-center space-y-6 shadow-2xl">
-              <div className="relative w-44 h-44 mx-auto rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-1 shadow-lg shadow-blue-500/20">
-                <div className="relative w-full h-full rounded-[14px] overflow-hidden bg-[#111113] flex items-center justify-center">
-                  <Image
-                    src="/profile.png"
-                    alt="Nikhil Nishad - AI Engineer & Full Stack Developer"
-                    width={220}
-                    height={220}
-                    priority
-                    className="object-cover object-top w-full h-full hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+          <div className="relative w-full max-w-sm animate-float-slow">
+            {/* Soft Ambient Light Glow Behind Portrait */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-tr from-blue-600/20 to-purple-600/20 rounded-full blur-3xl pointer-events-none" />
+
+            {/* Seamless Classy Transparent Portrait Container */}
+            <div className="relative flex flex-col items-center text-center space-y-4">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72">
+                <Image
+                  src="/profile.png"
+                  alt="Nikhil Nishad - AI Engineer & Full Stack Developer"
+                  width={320}
+                  height={320}
+                  priority
+                  className="object-contain w-full h-full drop-shadow-[0_10px_25px_rgba(59,130,246,0.25)] hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              <div>
-                <h3 className="text-xl font-bold text-white">{profile.name}</h3>
-                <p className="text-sm text-blue-400 font-mono mt-1">{profile.title}</p>
-                <p className="text-xs text-[#71717A] mt-1">{profile.location}</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 pt-2">
-                <div className="bg-[#111113] p-3 rounded-xl border border-white/5 text-left">
-                  <div className="flex items-center gap-1.5 text-blue-400 text-xs font-mono mb-1">
-                    <Bot className="w-3.5 h-3.5" />
-                    AI Stack
-                  </div>
-                  <p className="text-xs text-[#A1A1AA]">LLMs, RAG, Agents, MCP</p>
-                </div>
-                <div className="bg-[#111113] p-3 rounded-xl border border-white/5 text-left">
-                  <div className="flex items-center gap-1.5 text-indigo-400 text-xs font-mono mb-1">
-                    <Code2 className="w-3.5 h-3.5" />
-                    Web Stack
-                  </div>
-                  <p className="text-xs text-[#A1A1AA]">Next.js 15, React, Node, MERN</p>
-                </div>
+              <div className="glass-card px-5 py-3 rounded-2xl border border-white/10 shadow-xl backdrop-blur-md">
+                <h3 className="text-base font-bold text-white font-display">{profile.name}</h3>
+                <p className="text-xs text-blue-400 font-mono mt-0.5">{profile.title}</p>
               </div>
             </div>
           </div>

@@ -17,7 +17,7 @@ export const PhilosophySection: React.FC<{ philosophy: PhilosophyItem[] }> = ({ 
   };
 
   return (
-    <section id="philosophy" className="py-20 border-t border-white/5">
+    <section id="philosophy" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Core Values"
@@ -39,7 +39,7 @@ export const PhilosophySection: React.FC<{ philosophy: PhilosophyItem[] }> = ({ 
                   <div className="p-3 rounded-xl bg-[#111113] border border-white/10 w-fit">
                     {getIcon(item.icon)}
                   </div>
-                  <h3 className="text-base font-bold text-white">{item.title}</h3>
+                  <h3 className="text-base font-bold font-display text-white">{item.title}</h3>
                   <p className="text-xs text-[#A1A1AA] leading-relaxed">
                     {item.description}
                   </p>

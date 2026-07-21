@@ -11,7 +11,7 @@ import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 
 export const ExperienceSection: React.FC<{ experience: ExperienceItem[] }> = ({ experience }) => {
   return (
-    <section id="experience" className="py-20 border-t border-white/5">
+    <section id="experience" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Career History"
@@ -30,12 +30,12 @@ export const ExperienceSection: React.FC<{ experience: ExperienceItem[] }> = ({ 
               className="relative"
             >
               {/* Timeline Dot */}
-              <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#09090B]" />
+              <div className="absolute -left-[31px] md:-left-[47px] top-2 w-4 h-4 rounded-full bg-blue-500 border-4 border-[#09090B] shadow-md shadow-blue-500/50" />
 
               <Card className="space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
                   <div>
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
+                    <h3 className="text-lg font-bold text-white font-display flex items-center gap-2">
                       <Briefcase className="w-4 h-4 text-blue-400" />
                       {item.role}
                     </h3>

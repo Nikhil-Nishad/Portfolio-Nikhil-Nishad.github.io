@@ -10,7 +10,7 @@ import { Cpu, Rocket, ShieldCheck } from 'lucide-react';
 
 export const AboutSection: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
-    <section id="about" className="py-20 border-t border-white/5">
+    <section id="about" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Background & Journey"
@@ -30,18 +30,18 @@ export const AboutSection: React.FC<{ profile: Profile }> = ({ profile }) => {
                 {profile.aboutNarrative}
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-white/10">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-white/10">
                 <div>
-                  <h4 className="text-2xl font-bold text-white">MCA</h4>
-                  <p className="text-xs text-[#71717A] font-mono">CGPA 8.1 | YMCA University</p>
+                  <h3 className="text-2xl font-bold text-white font-display">MCA</h3>
+                  <p className="text-xs text-[#71717A] font-mono mt-0.5">CGPA 8.1 | YMCA University</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white">Venture7</h4>
-                  <p className="text-xs text-[#71717A] font-mono">AI Engineer (Client-Side)</p>
+                  <h3 className="text-2xl font-bold text-white font-display">Venture7</h3>
+                  <p className="text-xs text-[#71717A] font-mono mt-0.5">AI Engineer (Client-Side)</p>
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-white">4+</h4>
-                  <p className="text-xs text-[#71717A] font-mono">Production AI Projects</p>
+                  <h3 className="text-2xl font-bold text-white font-display">4+</h3>
+                  <p className="text-xs text-[#71717A] font-mono mt-0.5">Production AI Systems</p>
                 </div>
               </div>
             </Card>
@@ -55,31 +55,31 @@ export const AboutSection: React.FC<{ profile: Profile }> = ({ profile }) => {
             className="lg:col-span-5 space-y-4"
           >
             <Card className="flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-400">
+              <div className="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 shrink-0">
                 <Cpu className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white">AI First Engineering</h4>
+                <h4 className="text-sm font-semibold text-white font-display">AI-First Engineering</h4>
                 <p className="text-xs text-[#A1A1AA] mt-1">Integrating LLMs, prompt workflows, and document OCR directly into user products.</p>
               </div>
             </Card>
 
             <Card className="flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400">
+              <div className="p-2.5 rounded-xl bg-indigo-500/10 text-indigo-400 shrink-0">
                 <Rocket className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white">Product Mindset</h4>
+                <h4 className="text-sm font-semibold text-white font-display">Product Mindset</h4>
                 <p className="text-xs text-[#A1A1AA] mt-1">Focusing on measurable business impact, SEO growth, and 95+ Lighthouse scores.</p>
               </div>
             </Card>
 
             <Card className="flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400">
+              <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-white">Scalable Architecture</h4>
+                <h4 className="text-sm font-semibold text-white font-display">Scalable Architecture</h4>
                 <p className="text-xs text-[#A1A1AA] mt-1">Clean REST APIs, strict TypeScript, and modular component designs.</p>
               </div>
             </Card>

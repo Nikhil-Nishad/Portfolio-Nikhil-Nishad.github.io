@@ -7,11 +7,11 @@ import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { CurrentlyBuildingItem } from '@/lib/content';
-import { Flame, Sparkles } from 'lucide-react';
+import { Flame } from 'lucide-react';
 
 export const CurrentlyBuildingSection: React.FC<{ building: CurrentlyBuildingItem[] }> = ({ building }) => {
   return (
-    <section id="building" className="py-20 border-t border-white/5 bg-[#09090B]">
+    <section id="building" className="py-24 border-t border-white/5 bg-[#09090B]">
       <Container>
         <SectionHeading
           eyebrow="Active Innovation"
@@ -37,7 +37,7 @@ export const CurrentlyBuildingSection: React.FC<{ building: CurrentlyBuildingIte
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-white text-gradient-accent">
+                  <h3 className="text-base font-bold font-display text-white text-gradient-accent">
                     {item.title}
                   </h3>
 

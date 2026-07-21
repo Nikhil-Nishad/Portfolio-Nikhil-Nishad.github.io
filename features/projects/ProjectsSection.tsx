@@ -21,7 +21,7 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
     : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="py-20 border-t border-white/5">
+    <section id="projects" className="py-24 border-t border-white/5">
       <Container>
         <SectionHeading
           eyebrow="Portfolio Showcase"
@@ -30,7 +30,7 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
         />
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -38,7 +38,7 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
               className={`px-4 py-2 rounded-xl text-xs font-mono font-medium transition-all ${
                 filter === cat
                   ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
-                  : 'bg-[#18181B] text-[#A1A1AA] hover:text-white border border-white/10'
+                  : 'bg-[#141417] text-[#A1A1AA] hover:text-white border border-white/10'
               }`}
             >
               {cat}
@@ -68,7 +68,7 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-bold font-display text-white group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h3>
                     <p className="text-xs text-blue-400/80 font-mono mt-1">{project.subtitle}</p>
