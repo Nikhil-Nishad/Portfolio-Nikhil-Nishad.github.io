@@ -8,7 +8,8 @@ import { Card } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { ProjectItem } from '@/lib/content';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, FileText } from 'lucide-react';
+import Link from 'next/link';
 
 export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ projects }) => {
   const [filter, setFilter] = useState('All');
@@ -25,7 +26,7 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
         <SectionHeading
           eyebrow="Portfolio Showcase"
           title="Featured Projects"
-          description="AI products, full-stack web applications, and intelligent platforms."
+          description="Explore high-impact AI products, full-stack applications, and detailed case studies."
         />
 
         {/* Filter Tabs */}
@@ -88,11 +89,17 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
                   </div>
 
                   <div className="flex items-center gap-3">
+                    <Link href={`/projects/${project.slug}`} className="flex-1">
+                      <Button variant="primary" size="sm" className="w-full">
+                        <FileText className="w-3.5 h-3.5" />
+                        Case Study
+                      </Button>
+                    </Link>
                     {project.liveUrl && (
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
-                        <Button variant="primary" size="sm" className="w-full">
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <Button variant="secondary" size="sm">
                           <ExternalLink className="w-3.5 h-3.5" />
-                          Live Demo
+                          Demo
                         </Button>
                       </a>
                     )}
@@ -100,7 +107,6 @@ export const ProjectsSection: React.FC<{ projects: ProjectItem[] }> = ({ project
                       <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                         <Button variant="outline" size="sm">
                           <Github className="w-3.5 h-3.5" />
-                          GitHub
                         </Button>
                       </a>
                     )}

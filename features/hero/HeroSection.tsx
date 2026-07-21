@@ -4,37 +4,54 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
-import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Bot, Code2 } from 'lucide-react';
+import { Badge } from '@/components/ui/Badge';
+import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Bot, Code2, Award, BookOpen, CheckCircle2 } from 'lucide-react';
 import { Profile } from '@/lib/content';
 
 export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-      {/* Background Ambient Glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 w-[350px] h-[350px] bg-purple-600/10 rounded-full blur-[100px] pointer-events-none" />
+    <section className="relative min-h-[92vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-grid-pattern">
+      {/* Background Aurora Radial Glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/15 rounded-full aurora-blur pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[450px] h-[450px] bg-purple-600/15 rounded-full aurora-blur pointer-events-none" />
 
       <Container className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column Text Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6 }}
           className="lg:col-span-7 space-y-6"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>AI Engineer & Full Stack Developer</span>
+          {/* Status Badge */}
+          {profile.status && (
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span>{profile.status}</span>
+            </div>
+          )}
+
+          {/* Headline & Subtitle */}
+          <div className="space-y-3">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
+              Building <span className="text-gradient-accent">intelligent products</span> for real-world problems.
+            </h1>
+            <p className="text-[#A1A1AA] text-lg sm:text-xl leading-relaxed max-w-2xl">
+              AI Engineer focused on <span className="text-white font-medium">LLMs, Agentic AI, OCR, Automation</span>, and scalable full-stack web applications.
+            </p>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1]">
-            Hi, I'm <span className="text-gradient-accent">Nikhil Nishad</span>.
-          </h1>
+          {/* Key Stat Highlights */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+            {profile.stats?.map((stat, idx) => (
+              <div key={idx} className="glass-card p-3 rounded-xl border border-white/10 text-left">
+                <p className="text-[10px] font-mono text-blue-400 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-xs font-bold text-white mt-0.5 truncate">{stat.value}</p>
+              </div>
+            ))}
+          </div>
 
-          <p className="text-[#A1A1AA] text-lg sm:text-xl leading-relaxed max-w-2xl">
-            Building intelligent products using <span className="text-white font-medium">LLMs, Prompt Engineering, Agentic AI, RAG</span>, and scalable modern web architecture.
-          </p>
-
+          {/* Action CTAs */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
             <a href="#projects">
               <Button variant="primary" size="lg">
@@ -51,7 +68,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           </div>
 
           {/* Social Badges */}
-          <div className="flex items-center gap-4 pt-4 text-[#A1A1AA]">
+          <div className="flex items-center gap-4 pt-2 text-[#A1A1AA]">
             <a href={profile.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-xl border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5 transition-all">
               <Github className="w-5 h-5" />
             </a>
@@ -71,14 +88,15 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="lg:col-span-5 flex justify-center"
         >
-          <div className="relative w-full max-w-md">
-            {/* Glowing Accent Border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur opacity-30 animate-pulse" />
+          <div className="relative w-full max-w-md animate-float-slow">
+            {/* Glowing Rim Light */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-3xl blur opacity-35" />
             
-            <div className="relative glass-card rounded-3xl p-8 border border-white/15 text-center space-y-6">
-              <div className="relative w-36 h-36 mx-auto rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-1">
-                <div className="w-full h-full rounded-[14px] bg-[#111113] flex items-center justify-center text-4xl font-bold text-gradient">
+            <div className="relative glass-card rounded-3xl p-8 border border-white/15 text-center space-y-6 shadow-2xl">
+              <div className="relative w-40 h-40 mx-auto rounded-2xl overflow-hidden bg-gradient-to-tr from-blue-600 via-indigo-600 to-purple-600 p-1">
+                <div className="w-full h-full rounded-[14px] bg-[#111113] flex flex-col items-center justify-center text-4xl font-bold text-gradient">
                   NN
+                  <span className="text-[10px] font-mono font-normal text-blue-400 mt-1">AI ENGINEER</span>
                 </div>
               </div>
 
@@ -101,7 +119,7 @@ export const HeroSection: React.FC<{ profile: Profile }> = ({ profile }) => {
                     <Code2 className="w-3.5 h-3.5" />
                     Web Stack
                   </div>
-                  <p className="text-xs text-[#A1A1AA]">Next.js, React, Node, MERN</p>
+                  <p className="text-xs text-[#A1A1AA]">Next.js 15, React, Node, MERN</p>
                 </div>
               </div>
             </div>

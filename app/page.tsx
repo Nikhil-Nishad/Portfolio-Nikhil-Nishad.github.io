@@ -5,6 +5,8 @@ import { HeroSection } from '@/features/hero/HeroSection';
 import { AboutSection } from '@/features/about/AboutSection';
 import { ExperienceSection } from '@/features/experience/ExperienceSection';
 import { ProjectsSection } from '@/features/projects/ProjectsSection';
+import { CurrentlyBuildingSection } from '@/features/building/CurrentlyBuildingSection';
+import { PhilosophySection } from '@/features/philosophy/PhilosophySection';
 import { SkillsSection } from '@/features/skills/SkillsSection';
 import { AchievementsSection } from '@/features/achievements/AchievementsSection';
 import { ContactSection } from '@/features/contact/ContactSection';
@@ -14,6 +16,8 @@ import {
   getSkills,
   getAchievements,
   getProjects,
+  getCurrentlyBuilding,
+  getPhilosophy,
 } from '@/lib/content';
 
 export default function Home() {
@@ -22,6 +26,8 @@ export default function Home() {
   const skills = getSkills();
   const achievements = getAchievements();
   const projects = getProjects();
+  const building = getCurrentlyBuilding();
+  const philosophy = getPhilosophy();
 
   return (
     <main className="relative bg-[#09090B] text-[#FAFAFA] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
@@ -31,6 +37,8 @@ export default function Home() {
       <AboutSection profile={profile} />
       <ExperienceSection experience={experience} />
       <ProjectsSection projects={projects} />
+      <CurrentlyBuildingSection building={building} />
+      <PhilosophySection philosophy={philosophy} />
       <SkillsSection skills={skills} />
       <AchievementsSection achievements={achievements} />
       <ContactSection profile={profile} />

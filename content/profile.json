@@ -1,6 +1,8 @@
 {
   "name": "Nikhil Nishad",
   "title": "AI Engineer & Full Stack Developer",
+  "tagline": "Building intelligent products for real-world problems.",
+  "subtitle": "AI Engineer focused on LLMs, Agentic AI, OCR, Automation, and scalable full-stack applications.",
   "bio": "Building intelligent products using AI, modern web technologies, and scalable software architecture.",
   "location": "Faridabad, Haryana, India",
   "email": "nikhilnishad1801@gmail.com",
@@ -8,5 +10,12 @@
   "github": "https://github.com/Nikhil-Nishad",
   "linkedin": "https://www.linkedin.com/in/nikhilnishad",
   "resume": "/Nikhil_Nishad_Resume.pdf",
+  "status": "Available for High-Impact Roles & AI Engineering",
+  "stats": [
+    { "label": "Current Role", "value": "AI Engineer @ Venture7" },
+    { "label": "Experience", "value": "1+ Year Industry" },
+    { "label": "Publication", "value": "ETESM 2025 IEEE" },
+    { "label": "Ideathon Win", "value": "1st Prize Winner" }
+  ],
   "aboutNarrative": "AI Engineer & Full Stack Developer with hands-on industry experience at Venture7 Technologies, working on client-side AI solutions and scalable web applications. Skilled in MERN stack, LLM integration, prompt engineering, OCR systems, and AI-driven automation pipelines. Passionate about building production-ready AI products and next-generation intelligent SaaS systems."
 }
