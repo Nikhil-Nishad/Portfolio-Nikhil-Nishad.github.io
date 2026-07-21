@@ -1,0 +1,32 @@
+[
+  {
+    "id": "venture7",
+    "company": "Venture7 Technologies",
+    "role": "AI Engineer & Full Stack Developer (Client-Side)",
+    "period": "July 2025 – Present",
+    "location": "Client-Facing",
+    "description": "Architecting client-facing AI applications and scalable full-stack web solutions.",
+    "highlights": [
+      "Integrated LLMs and prompt-engineered workflows into production-ready systems.",
+      "Built AI-powered automation pipelines, chatbot modules, and workflow agents.",
+      "Designed and optimized REST APIs and scalable backend architectures.",
+      "Developed an OCR-based POC for intelligent document data extraction and structured JSON output.",
+      "Collaborated with clients and agile teams to deliver clean, maintainable SaaS tools."
+    ],
+    "techStack": ["React.js", "Node.js", "Express.js", "MongoDB", "LLMs", "OCR", "Python", "Automation"]
+  },
+  {
+    "id": "cabbalistic",
+    "company": "Cabbalistic Technologies Private Limited",
+    "role": "Software Developer / Full Stack Developer",
+    "period": "May 2025 – June 2025",
+    "location": "India",
+    "description": "Full-stack development using MERN stack for scalable web applications.",
+    "highlights": [
+      "Developed and maintained full-stack web applications using MERN stack.",
+      "Built responsive UI components and optimized backend APIs for performance.",
+      "Implemented authentication, database integration, and RESTful services."
+    ],
+    "techStack": ["MongoDB", "Express.js", "React.js", "Node.js", "REST APIs"]
+  }
+]

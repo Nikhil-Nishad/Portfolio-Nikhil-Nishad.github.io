@@ -1,0 +1,18 @@
+# Nikhil Nishad - AI Engineer & Full Stack Developer
+> Portfolio v2 & AI Knowledge File
+
+Name: Nikhil Nishad
+Title: AI Engineer & Full Stack Developer
+Location: Faridabad, Haryana, India
+Email: nikhilnishad1801@gmail.com
+GitHub: https://github.com/Nikhil-Nishad
+LinkedIn: https://www.linkedin.com/in/nikhilnishad
+
+## Summary
+AI Engineer and Full Stack Developer with client-facing industry experience at Venture7 Technologies. Specializing in LLM integration, prompt engineering, agentic AI workflows, retrieval-augmented generation (RAG), intelligent OCR document extraction, and high-performance Next.js 15 / MERN stack web applications.
+
+## Key Projects
+- Elevate Fitness: AI-Powered Fitness App with personalized AI diet/workout plans (Published ETESM 2025 research paper).
+- ERP Academy: AI-Driven SAP Training Platform built with Next.js 15, TypeScript, and automated n8n workflows.
+- Event Sarathi: Wedding & Event Vendor Marketplace (1st Prize Winner Inter-University Ideathon 2024).
+- AI OCR Platform: Proof-of-concept for extracting structured JSON from invoice/document scans.

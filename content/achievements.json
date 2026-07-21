@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ideathon-2024",
+    "title": "1st Prize – Inter-University Ideathon (2024)",
+    "category": "Award",
+    "organization": "Inter-University Competition",
+    "description": "Presented Event Sarathi, a MERN-based wedding vendor marketplace, winning 1st place among 20+ university teams."
+  },
+  {
+    "id": "research-paper-2025",
+    "title": "Research Paper Publication – ETESM 2025",
+    "category": "Publication",
+    "organization": "International Conference on Emerging Trends in Engineering, Science and Management",
+    "description": "Published paper titled 'Hyper-Personalization using AI: Elevate Fitness', detailing AI customization algorithms."
+  },
+  {
+    "id": "mongodb-cert",
+    "title": "Introduction to MongoDB",
+    "category": "Certification",
+    "organization": "MongoDB Official"
+  },
+  {
+    "id": "react-cert",
+    "title": "React.js Certification Intermediate",
+    "category": "Certification",
+    "organization": "LinkedIn Learning"
+  },
+  {
+    "id": "js-cert",
+    "title": "Certified JavaScript Developer",
+    "category": "Certification",
+    "organization": "HackerRank"
+  }
+]

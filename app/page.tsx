@@ -1,0 +1,40 @@
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { CursorGlow } from '@/components/layout/CursorGlow';
+import { HeroSection } from '@/features/hero/HeroSection';
+import { AboutSection } from '@/features/about/AboutSection';
+import { ExperienceSection } from '@/features/experience/ExperienceSection';
+import { ProjectsSection } from '@/features/projects/ProjectsSection';
+import { SkillsSection } from '@/features/skills/SkillsSection';
+import { AchievementsSection } from '@/features/achievements/AchievementsSection';
+import { ContactSection } from '@/features/contact/ContactSection';
+import {
+  getProfile,
+  getExperience,
+  getSkills,
+  getAchievements,
+  getProjects,
+} from '@/lib/content';
+
+export default function Home() {
+  const profile = getProfile();
+  const experience = getExperience();
+  const skills = getSkills();
+  const achievements = getAchievements();
+  const projects = getProjects();
+
+  return (
+    <main className="relative bg-[#09090B] text-[#FAFAFA] min-h-screen selection:bg-blue-500/30 selection:text-blue-200">
+      <CursorGlow />
+      <Navbar resumeUrl={profile.resume} />
+      <HeroSection profile={profile} />
+      <AboutSection profile={profile} />
+      <ExperienceSection experience={experience} />
+      <ProjectsSection projects={projects} />
+      <SkillsSection skills={skills} />
+      <AchievementsSection achievements={achievements} />
+      <ContactSection profile={profile} />
+      <Footer github={profile.github} linkedin={profile.linkedin} email={profile.email} />
+    </main>
+  );
+}
